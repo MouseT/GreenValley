@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, inintial scale=1.0">	
+	<link href='https://fonts.googleapis.com/css?family=PT+Serif+Caption|Fira+Sans:400,500|PT+Sans+Caption:400,700|PT+Serif:400,700' rel='stylesheet'>
+	<link rel="stylesheet" href="css/style.css">
+	<title>Номера в отеле</title>		
+</head>
+<body>
+
+ 
+	  <header class="page-header">
+    <div class="container">
+      <div class="page-header__inner  row">
+        <div class="page-header__logo  col-xs-12  col-lg-2">
+          <a href="index.html" class="logo-pic"  style="background-image: url(img/header-logo.png);"></a>
+        </div>
+        <nav class="main-nav">
+          <a href="" id="menu_trigger"  class="hamburger  hidden-lg"><span></span></a>
+          <ul class="main-nav__list  col-lg-5  visible-lg-block">
+            <li class="main-nav__item"><a href="roomlist.html" class="main-nav__link  main-nav__link--underline">Номера</a></li>
+            <li class="main-nav__item"><a href="single-room.html" class="main-nav__link">Коттедж</a></li>
+            <li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
+            <li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
+            <li class="main-nav__item"><a href="index(2).html" class="main-nav__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="page-header__contacts  col-lg-3  visible-lg-block"><strong>+7 812 777-55-88</strong><span>г.Санкт-Петербург, Приморское ш.600</span></div>
+        <div class="page-header__button  col-lg-2  visible-lg-block">
+          <a href="form.html" class="btn btn--icon-calendar">Забронировать</a>
+        </div>
+      </div>
+    </div>
+
+    <ul class="hamburger-opened" id="additional-menu">
+      <li class="hamburger-opened__item"><a href="roomlist.html" class="main-nav__link">Номера</a></li>
+      <li class="hamburger-opened__item"><a href="single-room.html" class="main-nav__link">Коттедж</a></li>
+      <li class="hamburger-opened__item"><a href="" class="main-nav__link">Ресторан</a></li>
+      <li class="hamburger-opened__item"><a href="" class="main-nav__link">Отдых</a></li>
+      <li class="hamburger-opened__item"><a href="" class="main-nav__link">Контакты</a></li>
+    </ul>
+
+  </header>
+
+
+	<section class="rooms-banner"  style="background-image: url(img/roomlist-header.jpg);">
+		<h1 class="rooms-banner__title">Номера в отеле Green Valley</h1>	
+		<p class="rooms-banner__text">Комфорт и живописный вид на Финский залив и сосновый парк.</p>
+		<p class="rooms-banner__text">4 этажа | 70 номеров</p>
+	</section>
+
+
+	<section class="roomlist">
+		<h2 class="roomlist__title">Категории</h2>
+		<ul class="roomlist__list">
+			<li class="roomlist__item">
+				<header class="room-header">
+					<h3 class="room-header__title">Эконом</h3>
+					<span class="price-per-night">от <strong>3400</strong> руб./сутки</span>
+				</header>
+				<div class="roomlist__pic">
+					<img src="img/roomlist-econom.jpg" alt="">
+				</div>
+				<div class="roomlist__text-wrapper">				
+					<p class="room-short-description">В отеле 30 таких номеров площадью от 16 до 20 кв.м. Рассчитаны на проживание 1-2 человек. Часть номеров с видом на Финский залив. </p>
+					<div class="roomlist__btn"><a href="form.html" class="btn">Забронировать</a></div>
+					<a href="single-room.html" class="details">Подробнее</a>
+				</div>
+			</li>
+
+			<li class="roomlist__item">
+				<header class="room-header">
+					<h3 class="room-header__title">Стандарт</h3>
+					<span class="price-per-night">от <strong>4000</strong> руб./сутки</span>
+				</header>
+				<div class="roomlist__pic">	
+					<img src="img/roomlist-standart.jpg" alt="">
+				</div>
+				<div class="roomlist__text-wrapper">				
+					<p class="room-short-description">В отеле 20 таких номеров. Рассчитаны на проживание 2-3 человек. Площадь номера 20-25 кв.м., состоит из гостевой и спальной зоны.</p> 
+					<div class="roomlist__btn"><a href="form.html" class="btn">Забронировать</a></div>
+					<a href="single-room.html" class="details">Подробнее</a>
+				</div>
+			</li>	
+
+			<li class="roomlist__item">
+				<header class="room-header">
+					<h3 class="room-header__title">Стандарт +</h3>
+					<span class="price-per-night">от <strong>4500</strong> руб./сутки</span>
+				</header>
+				<div class="roomlist__pic">	
+					<img src="img/roomlist-standartplus.jpg" alt="">
+				</div>
+				<div class="roomlist__text-wrapper">								
+					<p class="room-short-description">В отеле 15 таких номеров. 2-комнатный номер предназначен для проживания 2-4 человек. Площадь номера 35 кв.м.</p>
+					<div class="roomlist__btn"><a href="form.html" class="btn">Забронировать</a></div>
+					<a href="single-room.html" class="details">Подробнее</a>
+				</div>
+			</li>
+
+			<li class="roomlist__item">
+				<header class="room-header">
+					<h3 class="room-header__title">Люкс</h3>
+					<span class="price-per-night">от <strong>5700</strong> руб./сутки</span>
+				</header>
+				<div class="roomlist__pic">	
+					<img src="img/roomlist-lux.jpg" alt="">
+				</div>
+				<div class="roomlist__text-wrapper">				
+					<p class="room-short-description">В отеле 5 таких номеров. Просторные номера площадью до 40 кв.м. с видом на Финский залив, выполнены в оригинальном стиле.</p>
+					<div class="roomlist__btn"><a href="form.html" class="btn">Забронировать</a></div>
+					<a href="single-room.html" class="details">Подробнее</a>
+				</div>
+			</li>	
+
+		</ul>
+	</section>
+
+	  <footer class="page-footer">
+    <div class="page-footer__inner">
+      <div class="page-footer__address"><p>г.Санкт-Петербург</p><p>Приморское ш. 600</p></div>
+      <div class="page-footer__links">
+        <a href="index.html" class="logo-pic" style="background-image: url(img/footer-logo.png);"></a>
+        <div class="social-media">
+          <a href=""  class="social-media__item  social-media__item--vk"></a>
+          <a href=""  class="social-media__item  social-media__item--in"></a>
+          <a href=""  class="social-media__item  social-media__item--fb"></a>
+        </div>
+      </div>
+      <div class="page-footer__contacts"><p>+7 812 777-55-88</p><p>info@greenvalley.ru</p></div>
+    </div>
+  </footer>
+	<script src="js/script.min.js"></script>
+
+
+
+</body>
+</html>

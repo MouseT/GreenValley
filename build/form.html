@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, inintial scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=PT+Serif+Caption|Fira+Sans:400,500|PT+Sans+Caption:400,700|PT+Serif:400,700' rel='stylesheet'>
+	<link rel="stylesheet" href="css/style.css">
+	<title>Form</title>		
+</head>
+<body>
+
+
+	  <header class="page-header">
+    <div class="container">
+      <div class="page-header__inner  row">
+        <div class="page-header__logo  col-xs-12  col-lg-2">
+          <a href="index.html" class="logo-pic"  style="background-image: url(img/header-logo.png);"></a>
+        </div>
+        <nav class="main-nav">
+          <a href="" id="menu_trigger"  class="hamburger  hidden-lg"><span></span></a>
+          <ul class="main-nav__list  col-lg-5  visible-lg-block">
+            <li class="main-nav__item"><a href="roomlist.html" class="main-nav__link  @@current-page-menu-class">Номера</a></li>
+            <li class="main-nav__item"><a href="single-room.html" class="main-nav__link">Коттедж</a></li>
+            <li class="main-nav__item"><a href="" class="main-nav__link">Ресторан</a></li>
+            <li class="main-nav__item"><a href="" class="main-nav__link">Отдых</a></li>
+            <li class="main-nav__item"><a href="index(2).html" class="main-nav__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="page-header__contacts  col-lg-3  visible-lg-block"><strong>+7 812 777-55-88</strong><span>г.Санкт-Петербург, Приморское ш.600</span></div>
+        <div class="page-header__button  col-lg-2  visible-lg-block">
+          <a href="form.html" class="btn btn--icon-calendar">Забронировать</a>
+        </div>
+      </div>
+    </div>
+
+    <ul class="hamburger-opened" id="additional-menu">
+      <li class="hamburger-opened__item"><a href="roomlist.html" class="main-nav__link">Номера</a></li>
+      <li class="hamburger-opened__item"><a href="single-room.html" class="main-nav__link">Коттедж</a></li>
+      <li class="hamburger-opened__item"><a href="" class="main-nav__link">Ресторан</a></li>
+      <li class="hamburger-opened__item"><a href="" class="main-nav__link">Отдых</a></li>
+      <li class="hamburger-opened__item"><a href="" class="main-nav__link">Контакты</a></li>
+    </ul>
+
+  </header>
+
+
+	<section class="reservation">
+		<div class="reservation__inner">
+			<h2 class="reservation__title">Бронирование</h2>
+			<p class="reservation__text">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <strong>+7 812 777-55-88</strong></p>
+		</div>
+	</section>
+
+
+	<form id="main-form" action="">
+
+
+		<section class="stay-period">
+			<div class="stay-period__inner">
+				<header class="step">Шаг 1</header>
+				<h2 class="stay-period__title">Дата отдыха</h2>
+				<ul class="stay-period__date-list">	
+					<li class="stay-period__date-item">
+						Дата въезда
+						<div class="stay-period__date">
+							<label><input type="number"  id="arrival-day"  min="1" max="31"  placeholder="ДД"  required></label> 
+							<label><input type="number"  id="arrival-month"  min="1" max="12"  placeholder="ММ"  required></label> 
+							<label><input type="number"  id="arrival-year"  min="2015" max="2030"  placeholder="ГГГГ"  required></label>
+						</div>
+					</li>
+					<li class="stay-period__date-item">	
+						Дата выезда
+						<div class="stay-period__date">
+							<label><input type="number"  id="departure-day"  min="1" max="31"  placeholder="ДД"  required></label> 
+							<label><input type="number"  id="departure-month"  min="1" max="12"  placeholder="ММ"  required></label> 
+							<label><input type="number"  id="departure-year"  min="2015" max="2030"  placeholder="ГГГГ"  required></label>
+						</div>
+					</li>												
+				</ul>
+			</div>	
+		</section>
+
+
+		<section class="residence">
+			<div class="residence__inner">
+				<header class="step">Шаг 2</header>
+				<h2 class="residence__title">Место проживания</h2>
+				<ul class="residence__list">
+					<li class="residence__item">				
+						<label class="residence__choise">
+							<input type="radio" name="residence-type">						
+							<span  class="residence__item-name">Отель</span>
+						</label>
+					</li>					
+					<li class="residence__item">
+						<label class="residence__choise">
+							<input type="radio" name="residence-type" checked>						
+							<span  class="residence__item-name">Коттедж</span>
+						</label>					
+					</li>
+				</ul>
+			</div>
+		</section>
+
+
+		<section class="cottages">
+			<div class="cottages__inner">
+				<header class="step">Шаг 3</header>
+				<h2 class="cottages__title">Тип коттеджа</h2>
+				<ul class="cottages__list">
+					<li class="cottages__item">
+						<input type="radio" name="cottage-type"  class="cottages__input"  id="flagman">	
+						<label for="flagman"  class="cottages__choise">Флагман</label>					
+					</li>
+					<li class="cottages__item">
+						<input type="radio" name="cottage-type"  class="cottages__input"  id="ozerny">			
+						<label for="ozerny" class="cottages__choise">Озерный</label>						
+					</li>
+					<li class="cottages__item">
+						<input type="radio" name="cottage-type"  class="cottages__input"  id="olhovka">		
+						<label for="olhovka" class="cottages__choise">Ольховка</label>							
+					</li>
+					<li class="cottages__item">
+						<input type="radio" name="cottage-type"  class="cottages__input"  id="portovy">	
+						<label for="portovy" class="cottages__choise">Портовый</label>							
+					</li>
+				</ul>
+				<div class="house-description"  id="house-description--flagman">
+					<ul class="house-description__list">
+						<li class="house-description__item">Площадь 100м<sup>2</sup></li>
+						<li class="house-description__item">3 комнаты</li>
+						<li class="house-description__item">5 спальных мест</li>
+						<li class="house-description__item">Раздельный санузел</li>
+						<li class="house-description__item">Wi-fi</li>				
+					</ul>
+				</div>
+				<div class="house-description"  id="house-description--ozerny">				
+					<ul class="house-description__list">
+						<li class="house-description__item">Площадь 200м<sup>2</sup></li>
+						<li class="house-description__item">3 комнаты</li>
+						<li class="house-description__item">5 спальных мест</li>
+						<li class="house-description__item">Раздельный санузел</li>
+						<li class="house-description__item">Wi-fi</li>				
+					</ul>
+				</div>
+				<div class="house-description"  id="house-description--olhovka">	
+					<ul class="house-description__list">
+						<li class="house-description__item">Площадь 300м<sup>2</sup></li>
+						<li class="house-description__item">3 комнаты</li>
+						<li class="house-description__item">5 спальных мест</li>
+						<li class="house-description__item">Раздельный санузел</li>
+						<li class="house-description__item">Wi-fi</li>				
+					</ul>
+				</div>
+				<div class="house-description"  id="house-description--portovy">	
+					<ul class="house-description__list">
+						<li class="house-description__item">Площадь 400м<sup>2</sup></li>
+						<li class="house-description__item">3 комнаты</li>
+						<li class="house-description__item">5 спальных мест</li>
+						<li class="house-description__item">Раздельный санузел</li>
+						<li class="house-description__item">Wi-fi</li>				
+					</ul>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="client">
+			<div class="client__inner">
+				<header class="step">Шаг 4</header>
+				<h2 class="client__title">Персональная информация</h2>
+				<div class="client__info--wrapper">
+					<label class="client__info  client__info-filled">
+						<input type="text" name="name" placeholder="Имя" required>
+						<span class="client__check-icon"></span>
+					</label>
+					<label class="client__info">
+						<input type="text" name="surname" placeholder="Фамилия" required>
+						<span class="client__check-icon"></span>						
+					</label>
+				</div>
+				<div class="client__info--wrapper">
+					<label class="client__info">
+						<input type="tel" name="telephone" placeholder="Номер телефона" required>
+						<span class="client__check-icon"></span>						
+						<div class="client__clarification">Мы свяжемся с вами в случае необходимости.</div>			
+					</label>
+					<label class="client__info">
+						<input type="email" name="email" placeholder="E-mail" required>
+						<span class="client__check-icon"></span>						
+						<div class="client__clarification">На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>							
+					</label>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="payment">
+			<div class="payment__inner">
+				<header class="step">Шаг 5</header>
+				<h2 class="payment__title">Способ оплаты</h2>
+				<div class="pay">
+					<div class="pay__wrapper">
+						<div class="pay__later">
+							<label class="pay__choise" for="later">
+								<input type="radio" name="pay" id="later">							
+								<h4 class="pay__title">По приезду</h4>
+								<p class="pay__text">Вы можете произвести оплату по факту заселения</p>
+							</label>
+						</div>
+						<div class="pay__now">
+							<label class="pay__choise" for="now">
+								<input type="radio" name="pay" id="now" checked>				
+								<h4 class="pay__title">Сейчас</h4>
+								<p class="pay__text">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
+							</label>							
+							<div class="card-info">
+								<div class="card-info__wrapper">
+									<div class="card-info__field">
+										<label for="card-number">Номер карты</label>
+										<input type="text" class="card-info__input" name="card-number" maxlength="16" id="card-number" placeholder="0000-0000-0000-0000">
+									</div>
+									<div class="card-info__field">
+										<label for="card-holder">Фамилия владельца карты</label>
+										<input type="text" class="card-info__input" name="card-holder" id="card-holder" placeholder="VLADIMIR VLADIMIROV">
+									</div>
+								</div>
+								<div class="card-info__wrapper  card-info__wrapper--short">							
+									<div class="card-info__field  card-info__field--short">
+										<div class="card-info__pic-q"></div>
+										<div class="card-info__prompt">Подсказка о CVV</div>
+										<label for="cvv-code">Код CVV</label>
+										<input type="text" class="card-info__input" name="cvv-code" maxlength="3" id="cvv-code" placeholder="123">
+									</div>
+									<div class="card-info__field  card-info__field--short">
+										<label for="valid-until">Действует до</label>
+										<input type="text" class="card-info__input" name="valid-until" maxlength="7" id="valid-until" placeholder="01/2018">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bill">
+						<h3>К оплате</h3>
+						<div class="bill__charge">15000 рублей</div>
+					</div>
+					<div class="bill  bill--false">
+						<h3>К оплате</h3>
+						<div class="bill__charge">-</div>				
+						<div class="bill__annotation">Пожалуйста, <a href="" class="dashed">выберите дату</a> въезда и выезда, чтобы увидеть сумму к оплате.</div>				
+					</div>
+				</div>
+				<div class="payment__button">
+					<button type="submit" class="btn  btn--green  btn--wide">Забронировать</button>
+				</div>	
+			</div>			
+		</section>
+
+
+	</form>
+
+
+	  <footer class="page-footer">
+    <div class="page-footer__inner">
+      <div class="page-footer__address"><p>г.Санкт-Петербург</p><p>Приморское ш. 600</p></div>
+      <div class="page-footer__links">
+        <a href="index.html" class="logo-pic" style="background-image: url(img/footer-logo.png);"></a>
+        <div class="social-media">
+          <a href=""  class="social-media__item  social-media__item--vk"></a>
+          <a href=""  class="social-media__item  social-media__item--in"></a>
+          <a href=""  class="social-media__item  social-media__item--fb"></a>
+        </div>
+      </div>
+      <div class="page-footer__contacts"><p>+7 812 777-55-88</p><p>info@greenvalley.ru</p></div>
+    </div>
+  </footer>
+	<script src="js/script.min.js"></script>
+
+
+
+
+</body>
+</html>
