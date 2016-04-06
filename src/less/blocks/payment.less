@@ -1,0 +1,274 @@
+.payment{
+	width: 100%;
+	background-color: @grey-lightest;	
+	text-align: center;	
+
+	&__inner{
+		padding-top: 40px;
+		padding-bottom: 30px;
+
+	 	@media (min-width: @screen-sm) {
+	 		max-width: 800px;
+			margin: @margin-centering;	
+		}	
+	}
+
+	&__title{
+		margin: 0 0 35px;
+		font-size: @font-h2-3;
+		font-family: @pt-serif;
+		font-weight: @font-weight-regular;	
+		letter-spacing: @letter-spacing-50;	
+	}
+
+	&__button{
+		margin: 50px 20px 50px;
+
+		@media (min-width: @screen-sm) {
+			margin: 50px 0px 50px;	
+			}
+		@media (min-width: @screen-lg) {
+			margin: 50px 10px 50px;
+		}			
+	}
+}
+
+.pay{
+
+	@media (min-width: @screen-sm) {
+		display: flex;		
+			width: 100%;
+		}
+	@media (min-width: @screen-lg) {
+			max-width: 780px;
+			margin: @margin-centering;	
+		}			
+
+	&__wrapper{
+
+		@media (min-width: @screen-sm) {
+			width: 63%;
+			order: 1;
+			margin-left: 10px;
+		}		
+	}
+
+	&__later{
+		margin-bottom: 20px;
+
+		@media (min-width: @screen-sm) {
+			margin-bottom: 30px;
+			height: 100%;
+			border: 1px solid @grey-border;	
+		}					
+	}
+
+	&__now{
+		border: 1px solid @grey-border;			
+	}	
+
+	&__choise{
+		display: block;
+		background-color: @white;
+		font-size: @font-small;
+		font-family: @fira-sans;
+		cursor: pointer;
+		text-align: left;
+		padding-left: 70px;
+		position: relative;
+
+		input[type="radio"]{
+			display: none;
+
+			&:checked + .pay__title{
+				color: @grey-darkest;
+			}
+
+			&:checked + .pay__title:before{
+				background: url(../img/form-check.png) no-repeat;
+			}
+		}
+	}
+
+	&__title{
+		font-weight: @font-weight-medium;	
+		letter-spacing: @letter-spacing-50;
+		text-transform: uppercase;		
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-bottom: 0;	
+		margin-top: 0;
+		color: @grey;
+
+		&:before{
+			content: "";
+			display: block;
+			width: 17px;
+			height: 12px;
+			background: url(../img/form-check-disabled.png) no-repeat;	
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			transform: translateY(-50%);	
+		}			
+	}
+
+	&__text{
+		display: none;
+
+	 	@media (min-width: @screen-sm) {
+			display: block;
+			margin: 0;	
+			width: 270px;
+			position: absolute;
+			left: 180px;
+			top: 10px;
+		}		
+	}
+}
+
+.card-info{
+	width: 100%;
+	margin: -15px 0 0;
+	padding: 0 40px 20px;
+	border: none;
+	font-size: @font-small;
+	font-family: @fira-sans;
+	text-transform: uppercase;
+	text-align: left;	
+	background-color: @white;
+	position: relative;	
+
+	@media (min-width: @screen-sm) {
+		margin: 0;		
+		padding: 10px 0 20px;
+		display: flex;
+	}	
+
+	&__wrapper{
+
+		@media (min-width: @screen-sm) {
+			width: 65%;
+			margin-left: 20px;
+			margin-right: 10px;	
+		}
+	}
+
+	&__wrapper--short{
+		@media (min-width: @screen-sm) {
+			width: 35%;
+			margin-left: 10px;
+			margin-right: 40px;		
+		}
+	}
+
+	&__field{
+	
+		display: block;
+		margin-top: 3px;
+
+		label{
+			display: block;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		input[type="text"]{
+			width: 100%;
+			text-align: center;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			color: @grey;
+			border: 1px solid @grey-border;		
+
+			&:focus::-webkit-input-placeholder{
+				color: transparent;					
+			}				
+			&:focus::placeholder{
+				color: transparent;					
+			}
+
+			&:valid{
+				color: @green;			
+			}
+		}
+	}
+
+	&__field--short{
+		padding-right: 50%;
+
+		@media (min-width: @screen-sm) {
+			padding-right: 0;
+		}	
+	}
+	&__pic-q{
+		position: absolute;
+		top: 25px;
+		right: 40px;
+		width: 16px;
+		height: 17px;
+		background: url(../img/form-q.png) no-repeat;
+
+		&:hover + .card-info__prompt{
+			display: inline-block;
+		}
+	}	
+	&__prompt{
+		text-transform: none;
+		display: none;
+		position: absolute;
+		top: 25px;
+		right: -120px;
+		padding: 10px 15px;
+		border: 1px solid @grey-border;
+		background-color: @white;
+	}
+}
+
+.bill{
+	background-color: @white;
+	font-size: @font-small;
+	font-family: @fira-sans;
+	padding: 20px 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: none;
+	border: 1px solid @grey-border;	
+
+	@media (min-width: @screen-sm) {
+		width: 37%;
+		margin: 0 10px 0 0;
+	}	
+
+	h3{
+		margin: 0;
+		font-size: @font-small;
+		text-transform: uppercase;
+		font-weight: @font-weight-regular;	
+	}
+
+	&--false{
+		display: block;
+	}
+
+	&__charge{
+		font-size: @font-price;
+		font-weight: @font-weight-medium;
+	}
+
+	&__annotation{
+		text-align: left;
+
+		&:before{
+			content: "";
+			display: inline-block;
+			width: 16px;
+			height: 12px;
+			background: url(../img/form-warning.png) no-repeat;
+		}
+	}
+}
+
+.dashed{
+	border-bottom: 1px dashed @grey-darkest;
+}

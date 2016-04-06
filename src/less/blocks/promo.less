@@ -1,0 +1,109 @@
+
+.promo{
+	width: 100%;
+
+
+	&__pic-wrapper{
+		height: 320px;
+		background-size: cover;
+		background-position: 0% 100%;
+		padding-top: 20px;	
+
+		@media (min-width: @screen-sm) {
+
+		}
+		@media (min-width: @screen-lg) {
+			background-position: 50% 50%; 		
+			height: 430px;	
+			padding-top: 90px;
+		}	
+	}
+
+	&__text-wrapper{
+		padding-left: 0;
+		padding-right: 0;
+		@media (min-width: @screen-sm) {
+			max-width: @screen-sm;
+			margin: @margin-centering;				
+			padding-left: 10px;
+			padding-right: 10px;
+			}
+		@media (min-width: @screen-lg) {
+			max-width: @screen-lg;
+			margin: @margin-centering;	
+			padding-left: 0;
+			padding-right: 0;	
+
+		}	
+	}
+
+	&__title{
+		font-size: @font-accent;
+		font-family: @pt-serif-caption;
+		letter-spacing: @letter-spacing-50;
+		font-weight: @font-weight-regular;
+		background: @white;	
+		margin-top: 0;	
+		margin-bottom: 0;
+		text-align: center;
+		padding: 0 20px;
+
+		@media (min-width: @screen-sm) {
+			text-align: left;
+			font-size: @font-h1;
+			padding-left: 10px;	
+			margin-bottom: 15px;
+			background: transparent;				
+		}
+		@media (min-width: @screen-lg) {
+			padding-left: 0;
+			padding-right: 0;	
+			width: 50%;	
+		}	
+
+		span{
+			@media (min-width: @screen-sm) {
+				background: @white;	
+				padding-left: 10px;		
+				padding-right: 10px;	
+			}
+		 	@media (min-width: @screen-lg) {
+				
+			}	
+		}
+	}
+	
+	&__description{
+		font-size: @font-p;
+		font-family: @fira-sans;
+		background: @white;		
+		text-align: center;
+		margin-top: 0;
+		padding: 10px 20px 0;
+
+		@media (min-width: @screen-sm) {
+			text-align: left;
+			font-size: @font-accent;
+			padding-left: 10px;	
+			background: transparent;	
+
+		}
+		@media (min-width: @screen-lg) {
+			padding-left: 0;
+			padding-right: 0;		
+			width: 50%;		
+		}
+
+		span{
+			@media (min-width: @screen-sm) {
+				background: @white;	
+				padding-left: 10px;		
+				padding-right: 10px;	
+				display: inline-block;			
+			}
+			@media (min-width: @screen-lg) {
+			
+			}
+		}			
+	}
+}

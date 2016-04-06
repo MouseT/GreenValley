@@ -1,0 +1,103 @@
+ .client{
+	width: 100%;
+	text-align: center;	
+
+	&__inner{
+		padding-top: 40px;
+		padding-bottom: 30px;
+		margin-right: 20px;
+		margin-left: 20px;	
+
+	 	@media (min-width: @screen-sm) {
+			margin-right: 10px;
+			margin-left: 10px;		
+			padding-bottom: 50px;		
+		}	
+		@media (min-width: @screen-lg) {
+			max-width: 800px;
+			margin: @margin-centering;			
+		}
+	}
+
+	&__title{
+		margin: 0 0 15px;
+		font-size: @font-h2-3;
+		font-family: @pt-serif;
+		font-weight: @font-weight-regular;	
+		letter-spacing: @letter-spacing-50;
+	 	@media (min-width: @screen-sm) {
+			margin-bottom: 10px;
+		}
+
+	}
+
+	&__info--wrapper{
+		font-size: @font-small;
+		font-family: @fira-sans;
+		font-weight: @font-weight-regular;	
+
+	 	@media (min-width: @screen-sm) {
+			display: flex;
+		}
+	}
+
+	&__info{
+		position: relative;
+
+	 	@media (min-width: @screen-sm) {
+			display: block;
+			width: 50%;
+			margin-right: 10px;
+			margin-left: 10px;
+		}	
+
+		input{
+			width: 100%;
+			text-align: center;	
+			margin-top: 20px;	
+			padding-top: 13px;
+			padding-bottom: 13px;
+			border: 1px solid rgba(0,0,0,.08);
+			text-transform: uppercase;
+			color: @grey;
+
+			&:focus::-webkit-input-placeholder{
+				color: transparent;					
+			}				
+			&:focus::placeholder{
+				color: transparent;					
+			}
+
+			&:valid{
+				color: @grey-darkest;
+
+				 + .client__check-icon{
+					display: block;
+				}
+			}
+		}
+	}
+
+	&__check-icon{
+
+		display: none;
+		width: 17px;
+		height: 12px;
+		background: url(../img/form-check.png) no-repeat;	
+		position: absolute;
+		left: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+
+	 	@media (min-width: @screen-sm) {
+			top: 45px;
+		}
+	}
+
+	&__clarification{
+		width: 100%;
+		text-align: left;
+		margin-top: 10px;
+		line-height: @line-height;
+	}
+}

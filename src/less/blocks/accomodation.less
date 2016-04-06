@@ -1,0 +1,102 @@
+//@accomodation-height:             500px;
+
+.accomodation{
+	width: 100%;
+	background: url(../img/bg03.jpg) 50% 50% no-repeat;	
+	background-size: cover;	
+
+	&__inner{
+		text-align: center;	
+		padding: 0 20px;	
+		margin: @margin-centering;	
+	}
+
+	&__title{
+		color: @white;	
+		margin: 0;
+		padding: 40px 20px 35px;
+		font-size: @font-h2-3;
+		font-family: @pt-serif-caption;
+		letter-spacing: @letter-spacing-50;		
+		font-weight: @font-weight-medium;
+
+		@media (min-width: @screen-sm) {
+			font-size: @font-h2-2;
+		}
+	 	@media (min-width: @screen-lg) {
+		 	
+		}			
+	}
+
+	&__list{
+		margin: @margin-centering;	
+		padding-bottom: 35px;
+
+		@media (min-width: @screen-sm) {
+			display: flex;
+			max-width: @screen-sm;			
+		}
+	 	@media (min-width: @screen-lg) {
+			width: (@screen-lg - 420px);	
+		}	
+	}
+
+	&__item{
+		display: inline-block;
+		width: 100%;
+		margin: 0 0 20px;
+		background-color: @white;
+		font-size: @font-small;
+		font-family: @fira-sans;
+		font-weight: @font-weight-medium;
+		letter-spacing: @letter-spacing-50;	
+		text-transform: uppercase;
+
+		&:hover{
+			color: @grey-darkest;
+		}
+
+		@media (min-width: @screen-sm) {
+			width: 50%;
+			margin: 0 10px 20px;
+
+			&:first-child{
+				margin-left: 0;
+			}		
+			&:last-child{
+				margin-right: 0;
+			}		
+		}
+	}
+
+	&__pic{
+		width: 100%;
+		min-height: 200px;	
+		height: 100%;		
+		background-size: cover;
+
+		@media (min-width: @screen-sm) {
+			height: 100%;					
+		}		
+	}
+
+	&__text-wrapper{
+		padding-top: 30px;
+		padding-bottom: 40px;
+		border: 1px solid @grey-border;		
+
+		h3{
+			margin: @margin-centering;	
+			font-size: @font-h2-3;
+			font-weight: @font-weight-regular;		
+			font-family: @pt-serif;
+			letter-spacing: @letter-spacing-50;	
+			text-transform: none;
+		}
+
+		strong{
+			font-size: @font-accent;		
+			color: @light-orange;
+		}
+	}
+}

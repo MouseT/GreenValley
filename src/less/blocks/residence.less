@@ -1,0 +1,112 @@
+.residence{
+	width: 100%;
+	text-align: center;
+
+	&__inner{
+		padding-top: 40px;
+		padding-bottom: 45px;
+	 	@media (min-width: @screen-sm) {
+			padding-top: 45px;
+			padding-bottom: 50px;		
+		}	
+	}
+
+	&__title{
+		margin: 0 0 20px;
+		font-size: @font-h2-3;
+		font-family: @pt-serif;
+		font-weight: @font-weight-regular;	
+		letter-spacing: @letter-spacing-50;	
+	}
+
+	&__list{
+		padding: 0;
+		margin-right: 20px;
+		margin-left: 20px;
+		border: 1px solid @grey-border;
+		font-size: 0;
+		position: relative;
+
+	 	@media (min-width: @screen-sm) {
+			width: 380px;
+			margin: @margin-centering;			
+		}	
+	}
+
+	&__list:after{
+		content: "";
+		display: block;
+		width: 1px;
+		height: 70%;
+		background-color: @grey-border;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateY(-50%);
+		}
+
+	&__item{
+		display: inline-block;
+		height: 160px;
+		width: 50%;
+		font-size: @font-small;
+		font-family: @fira-sans;
+		letter-spacing: @letter-spacing-50;	
+		text-transform: uppercase;
+		position: relative;
+
+		&:first-child .residence__item-name:after{
+			width: 82px;
+			height: 64px;
+			background: url(../img/form-hotel.png) no-repeat;
+		}
+		&:last-child .residence__item-name:after{
+			width: 80px;
+			height: 62px;
+			background: url(../img/form-cottage.png) no-repeat;
+		}	
+	}
+
+	&__choise{
+		display: block;
+		cursor: pointer;
+		padding-bottom: 100px;
+
+		input[type="radio"]{
+			display: none;
+
+			&:checked + .residence__item-name:after{
+				opacity: 1.0;
+			}
+
+			&:checked + .residence__item-name:before{
+				content: "";
+				display: block;
+				width: 17px;
+				height: 12px;
+				background: url(../img/form-check.png) no-repeat;	
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 130px;
+			}
+		}			
+	}
+
+
+	&__item-name{
+		display: block;
+		margin-top: 20px;
+	}
+
+	&__item-name:after{
+		content: "";
+		display: block;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 50px;
+		opacity: 0.4;
+		transition: opacity 0.5s ease;		
+	}
+}
