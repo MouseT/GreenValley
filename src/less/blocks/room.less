@@ -1,0 +1,236 @@
+
+.room{
+	width: 100%;
+	text-align: center;
+
+	&__inner{
+		margin-top: 40px;
+		padding-bottom: 40px;
+
+	 	@media (min-width: @screen-sm) {
+			margin-top: 40px;
+			padding-bottom: 90px;		
+		}
+	 	@media (min-width: @screen-lg) {
+			max-width: @screen-lg;
+			padding: 40px 10px;				
+			margin: @margin-centering;		 
+		}	
+
+		> .room-header{
+			.room-header__title{ 		/* h2 */
+				font-size: @font-h2-2;
+			}
+		}
+
+		.price-per-night{
+			padding-top: 5px;
+		}
+
+		.btn{
+			margin-bottom: 10px;
+		}
+	}
+
+	&__info-wrapper{
+		margin-top: 25px;
+
+	 	@media (min-width: @screen-sm) {
+			margin-top: 40px;		
+		}
+	 	@media (min-width: @screen-lg) {
+			display: flex;
+			align-items: flex-start;		
+		}	
+	}
+
+	&__slider{
+
+	 	@media (min-width: @screen-lg) {
+			order: 2;
+			width: 50%; 
+			margin-left: 10px;	
+			max-width: 580px;			
+		}
+
+		.slick-prev{
+			display: none !important;
+
+			@media (min-width: @screen-sm) {
+				display: block !important;
+				left: 5%;
+			}
+		}
+
+		.slick-next{
+			display: none !important;
+
+			@media (min-width: @screen-sm) {
+				display: block !important;
+				right: 5%;
+			}
+		}
+	}
+
+	&__slider-item{
+		position: relative;		
+		display: none;
+
+		&--active{
+			display: block;
+		}
+	}
+
+	&__pic{
+
+		width: 100%;
+		height: 100%;
+		min-height: 260px;
+	}
+
+	&__loupe{
+		display: none;
+		background: url(../img/loupe.svg) no-repeat;
+		position: absolute;	
+		top: 20px;
+		right: 20px;
+		width: 22px;
+		height: 22px;
+
+		@media (min-width: @screen-sm) {
+			display: block;
+		}
+	}	
+
+	// &__unloupe{
+	// 	display: none;
+	// 	background: url(../../img/loupe2.svg);
+	// 	position: absolute;	
+	// 	top: 20px;
+	// 	right: 20px;
+	// 	width: 22px;
+	// 	height: 22px;
+
+	// 	@media (min-width: @screen-sm) {
+	// 		display: block;
+	// 	}
+	// }
+
+	&__text-wrapper{
+		padding-bottom: 45px;
+		padding-left: 20px;
+		padding-right: 20px;
+
+	 	@media (min-width: @screen-sm) {
+			padding-bottom: 35px;
+		}
+	 	@media (min-width: @screen-lg) {
+	 		margin-top: -10px;
+			padding-left: 0;
+			padding-bottom: 90px;
+			width: 50%; 	
+		}	
+	}
+
+	&__about{
+		margin-top: 40px;
+
+	 	@media (min-width: @screen-lg) {
+		margin-top: 0;	
+		}		
+
+		h3{
+			text-align: left;
+			margin: 0;
+			font-size: @font-h2-3;
+			font-family: @pt-serif;
+			font-weight: @font-weight-regular;	
+		}
+		.room-short-description{
+			margin-top: 20px;
+		}
+	}
+
+	&__facilities{
+		margin: 34px auto 0;
+
+		@media (min-width: @screen-sm) {
+			margin-top: 40px;
+		}
+		@media (min-width: @screen-lg) {
+			margin-top: 45px;
+		}
+
+		h3{
+			margin: 0;
+			text-align: left;		
+			font-size: @font-h2-3;
+			font-family: @pt-serif;
+			font-weight: @font-weight-regular;			
+		}
+		li{
+			&:before{
+				content: "";
+				width: 10px;
+				height: 10px;
+				display: inline-block;
+				background-image: url(../img/svg/arrows.svg);
+				background-size: cover;
+				margin-right: 5px;
+			}
+		}
+	}
+
+	&__facilities-list{
+		padding-left: 0;
+		margin: 20px auto 0;
+		line-height: @line-height;
+		font-size: @font-p;
+		font-family: @fira-sans;
+		text-align: left;	
+		list-style: none; 	
+												/* надо подключить font awesome */
+		@media (min-width: @screen-sm) {
+			columns: 2 auto;
+		}
+	}
+
+	&__price-included{
+		margin-top: 35px;
+
+		@media (min-width: @screen-sm) {
+			margin-top: 30px;
+		}	
+
+		h3{
+			text-align: left;		
+			margin: 0;
+			font-size: @font-h2-3;
+			font-family: @pt-serif;
+			font-weight: @font-weight-regular;		
+		}	
+	}
+
+	&__price-included-list{
+		padding-left: 0;	
+		margin: 20px auto 0;
+		line-height: @line-height;
+		font-size: @font-p;
+		font-family: @fira-sans;
+		text-align: left;	
+		list-style: none;
+
+		li{
+			&:before{
+				content: "";
+				width: 10px;
+				height: 10px;
+				display: inline-block;
+				background-image: url(../img/svg/arrows.svg);
+				background-size: cover;
+				margin-right: 5px;
+			}
+		}		
+	}
+}
+

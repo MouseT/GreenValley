@@ -1,0 +1,128 @@
+.stay-period{
+	width: 100%;
+	background-color: @grey-lightest;
+
+	&__inner{
+		margin: @margin-centering;	
+		text-align: center;	
+		padding-top: 45px;
+		padding-bottom: 20px;
+
+	 	@media (min-width: @screen-sm) {
+			width: @screen-sm;
+		}		
+	 	@media (min-width: @screen-lg) {
+	 		width: @screen-lg;		
+			padding-bottom: 100px;
+		}	
+	}
+
+	&__title{
+		margin: 0 0 25px;
+		font-size: @font-h2-3;
+		font-family: @pt-serif;
+		font-weight: @font-weight-regular;	
+		letter-spacing: @letter-spacing-50;	
+	 	@media (min-width: @screen-sm) {
+			margin-bottom: 20px;
+		}		
+	}
+
+	&__date-list{
+		padding: 0;
+		margin: @margin-centering;	
+		position: relative;	
+
+		@media (min-width: @screen-sm) {
+			width: 380px;
+			display: flex;
+		}	
+		@media (min-width: @screen-lg) {
+			background-color: @white; 
+			padding-bottom: 25px;
+		}	
+	}
+
+	&__date-list:after{
+		@media (min-width: @screen-lg) {
+			content: "";
+			display: block;
+			width: 1px;
+			height: 70%;
+			background-color: @grey-border;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translateY(-50%);
+		}	
+	}
+
+	&__date-item{
+		margin-top: 10px;
+		margin-bottom: 30px;
+		display: block;
+		text-transform: uppercase;
+		color: @grey-darker;
+		font-size: @font-small;
+		font-family: @fira-sans;
+		font-weight: @font-weight-medium;	
+		letter-spacing: @letter-spacing-15;
+
+		@media (min-width: @screen-sm) {
+			width: 50%;
+		}		
+	 	@media (min-width: @screen-lg) {
+			padding-top: 15px;
+		}			
+	}
+
+	&__date{
+		width: 180px;	
+		padding-top: 15px;
+		display: flex;
+		margin: @margin-centering;	
+		text-align: center;
+
+		@media (min-width: @screen-sm) {
+			padding-top: 10px;			
+			margin: 0;	
+		}	
+		@media (min-width: @screen-lg) {
+			margin: @margin-centering;		
+			width: 130px;	
+		}
+
+		label{
+			width: 10px;
+			height: 50px;
+			flex-grow: 5;
+
+		 	@media (min-width: @screen-lg) {
+				height: 25px;
+			}
+			&:last-child{
+				flex-grow: 8;
+			}
+		}
+
+		input[type="number"]{
+			text-align: center;
+			border: 1px solid @grey-border;		
+			box-shadow: none;		
+			width: 100%;
+			height: 100%;
+			color: @grey;
+
+			&:focus::-webkit-input-placeholder{
+				color: transparent;					
+			}				
+			&:focus::placeholder{
+				color: transparent;					
+			}
+
+			&:valid{
+				color: @green;			
+			}
+		}
+	}
+}

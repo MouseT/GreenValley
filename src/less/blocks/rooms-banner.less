@@ -1,0 +1,44 @@
+// @rooms-banner-height:             200px;
+
+.rooms-banner{
+	width: 100%;
+	margin: @margin-centering;
+	text-align: center;
+	background-position: 50% 50%;
+	background-size: cover;
+
+	@media (min-width: @screen-sm) {
+	padding-bottom: 35px;				
+	}
+
+	&__title{
+		display: block;	
+		margin: 0 auto;
+		padding: 70px 20px 60px;
+		color: @white;
+		font-size: @font-h2-2;
+		font-family: @pt-serif-caption;
+		letter-spacing: @letter-spacing-50;	
+		font-weight: @font-weight-regular;
+
+		@media (min-width: @screen-sm) {
+			padding: 40px 20px 20px;
+			font-size: @font-h1;			
+		}	
+		@media (min-width: @screen-lg) {
+			padding: 35px 20px 25px;
+		}	
+	}
+	
+	&__text{
+		display: none;
+		margin: 0;
+		color: @white;
+		font-size: @font-accent;
+		font-family: @fira-sans;
+
+		@media (min-width: @screen-sm) {
+			display: block;
+		}
+	}
+}
